@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Project 1</title>
-        <link rel="stylesheet" href="style/styles.css"></link>
+        <link rel="stylesheet" href="style.css"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
@@ -35,6 +35,22 @@
             <div class="imgban" id="imgban1">
             </div>    
         </div>
+        <script>
+            var bannerStatus = 1;
+            var bannerTime = 4000;
+
+            function bannerLoop(){
+                if (bannerStatus === 1){
+                    document.getElementById("imgban1").style.right = "0px";
+                    document.getElementById("imgban1").style.zIndex = "1000";
+                    document.getElementById("imgban2").style.right = "0px";
+                    document.getElementById("imgban2").style.zIndex = "1000";
+                    document.getElementById("imgban3").style.right = "0px";
+                    document.getElementById("imgban3").style.zIndex = "1000";
+            }
+        }
+        </script>
+
     </section>
 
 
