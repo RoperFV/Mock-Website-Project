@@ -8,7 +8,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
-    </head>
+<script src="script.js" defer></script>
+</head>
 <body>
     <section class="header">
         <nav>
@@ -27,75 +28,24 @@
             <a href="">Order Now</a>
         </div>
 
-        <div class="main-banner" id="main-banner"></div>
-            <div class="imgban" id="imgban3">
+        <section aria-label="Newest Photos">
+            <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="images/imgban.jpg" alt="Nature Image #1">
+                    </li>
+                    <li class="slide">
+                        <img src="images/imgban2.jpg" alt="Nature Image #2">
+                    </li>
+                    <li class="slide">
+                        <img src="images/imgban3.jpg" alt="Nature Image #3">
+                    </li>
+                </ul>
             </div>
-            <div class="imgban" id="imgban2">
-             </div>
-            <div class="imgban" id="imgban1">
-            </div>    
-        </div>
-        <script>
-            var bannerStatus = 1;
-            var bannerTime = 4000;
-            window.onload = function() {
-                bannerLoop();
-            }
-
-            var startBannerLoop = setInterval(function() {
-                bannerLoop();
-            }, bannerTimer);
-
-            function bannerLoop(){
-                if (bannerStatus === 1){
-                    document.getElementById("imgban2").style.opacity ="0";
-                    setTimeout(function(){
-                        document.getElementById("imgban1").style.right = "0px";
-                        document.getElementById("imgban1").style.zIndex = "1000";
-                        document.getElementById("imgban2").style.right = "-1200px";
-                        document.getElementById("imgban2").style.zIndex = "1500";
-                        document.getElementById("imgban3").style.right = "1200px";
-                        document.getElementById("imgban3").style.zIndex = "500";
-                    }, 500);
-                    setTimeout(function() {
-                        document.getElementById("imgban2").style.opacity ="1";
-                    },1000);
-                    bannerStatus = 2;
-                }
+      
         
-            else if (bannerStatus === 2){
-                    document.getElementById("imgban3").style.opacity ="0";
-                    setTimeout(function(){
-                        document.getElementById("imgban2").style.right = "0px";
-                        document.getElementById("imgban2").style.zIndex = "1000";
-                        document.getElementById("imgban3").style.right = "-1200px";
-                        document.getElementById("imgban3").style.zIndex = "1500";
-                        document.getElementById("imgban1").style.right = "1200px";
-                        document.getElementById("imgban1").style.zIndex = "500";
-                    }, 500);
-                    setTimeout(function() {
-                        document.getElementById("imgban3").style.opacity ="1";
-                    },1000);
-                    bannerStatus = 3;
-                }
-            else if (bannerStatus === 3){
-                    document.getElementById("imgban1").style.opacity ="0";
-                    setTimeout(function(){
-                        document.getElementById("imgban3").style.right = "0px";
-                        document.getElementById("imgban3").style.zIndex = "1000";
-                        document.getElementById("imgban1").style.right = "-1200px";
-                        document.getElementById("imgban1").style.zIndex = "1500";
-                        document.getElementById("imgban2").style.right = "1200px";
-                        document.getElementById("imgban2").style.zIndex = "500";
-                    }, 500);
-                    setTimeout(function() {
-                        document.getElementById("imgban1").style.opacity ="1";
-                    },1000);
-                    bannerStatus = 1;
-                }
-        }
-        </script>
-
     </section>
 
 
