@@ -1,3 +1,10 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Orelega One', cursive;
+}
 #fcf-form {
     display:block;
 }
@@ -157,4 +164,49 @@ label.fcf-label {
 
 input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
     width: 100%;
+}
+nav{
+    display: flex;
+    padding: 2px 6px;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+
+}
+nav img{
+    width: 150px;
+
+}
+.nav-links{
+    flex: 1;
+    text-align: left;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px 50px;
+    position: relative;
+
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
 }
