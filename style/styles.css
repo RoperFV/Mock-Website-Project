@@ -48,13 +48,13 @@ body {
     z-index: 2;
     background: none;
     border: none;
-    font-size: 4rem;
+    font-size: 1.2rem;
     top: 50%;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
     border-radius: .25rem;
-    padding: 0 .5rem;
+    padding:0 .3rem;
     background-color: rgba(0, 0, 0, .1);
   }
   
@@ -87,10 +87,11 @@ body {
 
 nav{
     display: flex;
-    padding: 2% 6%;
+    padding: 2px 6px;
     justify-content: space-between;
     align-items: center;
-
+    justify-content: space-around;
+    
 }
 nav img{
     width: 150px;
@@ -104,7 +105,7 @@ nav img{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    padding: 4px 50px;
+    padding: 5px 50px;
     position: relative;
 
 }
@@ -127,6 +128,28 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 
+}
+.menu{
+  display: none;
+}
+.menu-line {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 4px;
+}
+
+@media all and (max-width: 480px){
+    .nav-links{
+      flex-direction: column;
+    }
+    .menu {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+
+    } 
 }
 .text-box{
     width: 90%;
